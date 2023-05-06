@@ -1,0 +1,27 @@
+<section id="skills">
+  <div class="d-flex flex-row title-box">
+    <h2 id="section-1" class="text-start" data-aos="fade-up">
+      <span class="color">02. </span>Skills
+    </h2>
+    <span id="line"></span>
+  </div>
+  <div class="container justify-content-start d-flex flex-row">
+    <div class="skill-container" data-aos="fade-up">
+      <h3>Coding Languages:</h3>
+      <ul class="skill-list">
+        <li *ngFor="let Skill of Skills" class="skill-item">
+          {{ Skill }}
+        </li>
+      </ul>
+    </div>
+    <hr />
+    <div class="skill-container" data-aos="fade-up">
+      <h3>Frameworks/Libs/Systems:</h3>
+      <ul class="skill-list">
+        <li *ngFor="let Framework of Frameworks" class="skill-item">
+          {{ Framework }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

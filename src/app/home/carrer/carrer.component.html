@@ -1,0 +1,27 @@
+<section id="career">
+  <div class="d-flex flex-row title-box">
+    <h2 id="section-1" class="text-start">
+      <span class="color" data-aos="fade-up">03. </span>Carreer
+    </h2>
+    <span id="line"></span>
+  </div>
+
+  <div class="d-flex flex-row" data-aos="fade-up">
+    <ul>
+      <li *ngFor="let role of roles">
+        <button class="btn btn-carrer" [id]="role.id" (click)="selectRole(role.id)" [ngClass]="{'selected': role.id === selectedRoleId}">
+          {{ role.title }}
+        </button>
+      </li>
+    </ul>
+    <div class="container">
+      <div *ngFor="let role of roles" class="" [id]="role.id">
+        <div *ngIf="role.id === selectedRoleId">
+          <h5 data-aos="fade-up">{{ role.company }}</h5>
+          <h6 data-aos="fade-up" >{{ role.time }}</h6>
+          <p  style="white-space: pre-line" data-aos="fade-up">{{ role.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

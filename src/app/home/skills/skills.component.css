@@ -1,0 +1,21 @@
+
+.skill-container {
+width:50%;
+}
+
+.skill-list {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.skill-item {
+  /* Add any additional styles for list items */
+  display:inline-flex;
+  margin-right:30px;
+  margin-bottom: 10px;;
+}
+
+.skill-item:hover{
+  color:red;
+  cursor:pointer;
+}

@@ -1,0 +1,58 @@
+
+.gradient-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index:-100
+}
+
+.gradient {
+  position: absolute;
+  height: 100%;
+  width: 200%;
+  background: linear-gradient(120deg,  #e8c5ec, #50f0fb, #8486a8, #f97d54, #c514a2, #c67029, #39576e, #9db476, #9f2695, #2d3156, #c3efd2, #73b34c, #6b93a1, #f878ac, #8e5093, #b9bb7e, #6345ac, #c4e6bd, #1d8097, #e0ad7d, #2faeff, #4bdb3c, #cd0844, #20221d, #f5319d, #8030fe, #304dac, #d17559, #1fb733, #07ac9b, #84f90e, #b1b901, #fb9ebe, #f4d404, #1000d6, #c2c305, #4ec71c, #e71f63, #d0ab52, #9d3872, #515a79);
+  background-size: 3000% 3000%;
+  animation: color 60s ease-in-out infinite;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0% 50%;
+  }
+  5% {
+    background-position: 0% 50%;
+  }
+  15% {
+    background-position: 10% 50%;
+  }
+  25% {
+    background-position: 20% 50%;
+  }
+  35% {
+    background-position: 30% 50%;
+  }
+  45% {
+    background-position: 40% 50%;
+  }
+  55% {
+    background-position: 50% 50%;
+  }
+  65% {
+    background-position: 60% 50%;
+  }
+  75% {
+    background-position: 70% 50%;
+  }
+  85% {
+    background-position: 80% 50%;
+  }
+  95% {
+    background-position: 90% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
