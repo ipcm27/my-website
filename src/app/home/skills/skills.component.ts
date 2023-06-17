@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css'],
 })
-export class SkillsComponent {
+export class SkillsComponent implements OnInit{
   Skills = ['Java 8', 'JavaScript','TypeScript', 'HTML', 'CSS', 'SQL'];
   Frameworks = [
     'Angular',
@@ -25,4 +26,17 @@ export class SkillsComponent {
     'CI/CD',
     'MIcroservices and SOA',
   ];
+  constructor(private navigationService: NavigationService) {}
+
+  ngOnInit(): void {
+    this.navigationService.scroll$.subscribe(() => {
+      this.scrollToSection();
+    });
+  }
+
+  scrollToSection(): void {
+    const skillsElement = document.getElementById('skills');
+    skillsElement?.scrollIntoView({ behavior: 'smooth' });
+  }
+
 }

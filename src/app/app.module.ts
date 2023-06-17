@@ -31,8 +31,7 @@ import { PersonalProjectsComponent } from './home/personal-projects/personal-pro
     RecomendationsComponent,
     ContactMeComponent,
     GradientComponent,
-    PersonalProjectsComponent
-  ],
+    PersonalProjectsComponent,  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule ,
