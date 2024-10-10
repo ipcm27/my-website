@@ -21,6 +21,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "portofolio-igor": "file:",
+    "primeng": "^17.18.11",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"

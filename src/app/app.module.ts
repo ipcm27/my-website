@@ -17,6 +17,9 @@ import { ContactMeComponent } from './home/contact-me/contact-me.component';
 import { GradientComponent } from './gradient/gradient.component';
 import { PersonalProjectsComponent } from './home/personal-projects/personal-projects.component';
 import { RouterModule } from '@angular/router';
+import { CarouselModule } from 'primeng/carousel';
+import { ButtonModule } from 'primeng/button';
+
 
 @NgModule({
   declarations: [
@@ -39,6 +42,8 @@ import { RouterModule } from '@angular/router';
     BrowserAnimationsModule,
     AppRoutingModule,
     RouterModule,
+    CarouselModule,
+    ButtonModule,
   ],
 
   providers: [],

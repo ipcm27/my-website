@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-//import { CarouselModule } from 'primeng/carousel';
 import { Project } from 'src/app/interfaces/projects';
 import {ProjectService} from "src/app/services/project.service"
 
@@ -9,7 +8,7 @@ import {ProjectService} from "src/app/services/project.service"
   styleUrls: ['./personal-projects.component.css']
 })
 export class PersonalProjectsComponent {
-    Projects: Project[] | undefined;
+    Projects: Project[] = []
 
     responsiveOptions: any[] | undefined;
 
