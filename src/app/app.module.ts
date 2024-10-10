@@ -11,11 +11,12 @@ import { ProfileComponent } from './home/profile/profile.component';
 import { SkillsComponent } from './home/skills/skills.component';
 import { HeroComponent } from './home/hero/hero.component';
 import { AboutMeComponent } from './home/about-me/about-me.component';
-import { CarrerComponent } from './home/carrer/carrer.component';
-import { RecomendationsComponent } from './home/recomendations/recomendations.component';
+import { CareerComponent } from './home/career/career.component';
+import { RecommendationsComponent } from './home/recommendations/recommendations.component';
 import { ContactMeComponent } from './home/contact-me/contact-me.component';
 import { GradientComponent } from './gradient/gradient.component';
 import { PersonalProjectsComponent } from './home/personal-projects/personal-projects.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -27,17 +28,21 @@ import { PersonalProjectsComponent } from './home/personal-projects/personal-pro
     SkillsComponent,
     HeroComponent,
     AboutMeComponent,
-    CarrerComponent,
-    RecomendationsComponent,
+    CareerComponent,
+    RecommendationsComponent,
     ContactMeComponent,
     GradientComponent,
-    PersonalProjectsComponent,  ],
+    PersonalProjectsComponent,
+  ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule ,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    RouterModule,
   ],
+
   providers: [],
-  bootstrap: [AppComponent]
+  schemas: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
