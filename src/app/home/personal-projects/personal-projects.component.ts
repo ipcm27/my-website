@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CarouselModule } from 'primeng/carousel';
+//import { CarouselModule } from 'primeng/carousel';
 import { Project } from 'src/app/interfaces/projects';
 import {ProjectService} from "src/app/services/project.service"
 
