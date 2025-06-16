@@ -1,0 +1,35 @@
+.img-project{
+  width:720px;
+
+}
+
+.project--description--box{
+  margin-top:30px;
+  text-align: center;
+}
+
+ul{
+  margin-bottom: 1rem;
+}
+
+md-chip-set.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 0.5rem 0;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+md-suggestion-chip {
+  --md-suggestion-chip-container-shape: 9999px;
+  --md-suggestion-chip-label-text-size: 14px;
+  --md-suggestion-chip-label-text-weight: 500;
+  --md-suggestion-chip-label-text-color: #333;
+  --md-suggestion-chip-container-color: red;
+  min-height: 36px;
+  padding-inline: 16px;
+  cursor: default;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
+  font-family: 'Montserrat', sans-serif !important;
+}

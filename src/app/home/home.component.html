@@ -1,9 +1,10 @@
 
 <div class="container d-flex flex-column">
-  <app-hero class="card"></app-hero>
-  <app-about-me class="card"></app-about-me>
-  <app-skills class="card"></app-skills>
-  <app-career class="card"></app-career>
-  <app-personal-projects class="card"></app-personal-projects>
-  <app-recommendations class="card"></app-recommendations>
+  <app-hero class="card" ></app-hero>
+  <app-personal-projects class="card" [cardIndex]="1"></app-personal-projects>
+  <app-career class="card" [cardIndex]="2"></app-career>
+  <app-skills class="card" [cardIndex]="3"></app-skills>
+
+
+  <app-about-me class="card" [cardIndex]="4"></app-about-me>
 </div>

@@ -9,88 +9,58 @@ import { Project } from "../interfaces/projects"
 export class ProjectService {
   private projects: Project[] = [
     {
-      title: 'Barbershop Management System',
+      title: 'Zilla Order - Microservices E-commerce',
+      img: '/assets/projects/zilla-order.png',
       backend: {
         description:
-          'Management of appointments, clients, services, and professionals.',
-        technologies: [
-          'Java',
-          'Spring Boot',
-          'JPA/Hibernate',
-          'PostgreSQL/MySQL',
-        ],
+          'Distributed microservices architecture for order, product, and inventory management, each with independent databases and scalable deployment.',
       },
       frontend: {
         description:
-          'Dashboard for clients and employees to view available times, schedule services, and check history.',
-        technologies: ['Angular', 'TypeScript', 'Angular Material'],
+          'Interface for managing products, placing orders, and viewing real-time inventory, with clean UX and Angular + Tailwind stack.',
       },
       differentials: [
-        'JWT for authentication',
-        'Real-time notifications with WebSockets',
-        'Deployment with Docker and Kubernetes',
+        'MongoDB (Product), PostgreSQL (Order & Inventory)',
+        'Dockerized microservices with Kubernetes-ready setup',
+        'Scalable APIs with Spring Boot',
       ],
       technologies: [
         'Java',
         'Spring Boot',
-        'JPA/Hibernate',
         'PostgreSQL',
+        'MongoDB',
         'Docker',
-        'Kubernetes',
-        'Angular',
-      ],
-    },
-    {
-      title: 'Package Tracking System',
-      backend: {
-        description: 'Integration with logistics APIs for real-time tracking.',
-        technologies: ['Java', 'Spring Boot', 'Redis', 'Kafka'],
-      },
-      frontend: {
-        description:
-          'User-friendly interface for entering tracking codes and monitoring packages.',
-        technologies: ['Angular', 'RxJS', 'TypeScript', 'Google Maps API'],
-      },
-      differentials: [
-        'Caching with Redis',
-        'Kafka for real-time event processing',
-        'Map location visualization',
-      ],
-      technologies: [
-        'Java',
-        'Spring Boot',
-        'Redis',
-        'Kafka',
         'Angular',
         'RxJS',
-        'Google Maps API',
+        'TailwindCSS',
       ],
+      link: 'https://github.com/ipcm27/Zilla-Order',
     },
     {
-      title: 'Book Recommendation System Using AI',
+      title: 'Summary AI - Internal Assistant with RAG',
+      img: '/assets/projects/rag-model.webp',
       backend: {
         description:
-          'Integration with OpenAI for book recommendations and using MongoDB for user data storage.',
-        technologies: ['Java', 'Spring Boot', 'MongoDB', 'OpenAI API'],
+          'RAG (Retrieval-Augmented Generation) assistant using vector databases for semantic search and OpenAI API to generate contextual responses.',
       },
       frontend: {
         description:
-          'Interface for users to input their favorite books and view recommendations.',
-        technologies: ['Angular', 'TypeScript', 'Angular Material'],
+          'Simple chat interface to query internal documents with real-time answers and traceable source links.',
       },
       differentials: [
-        'Integration with OpenAI',
-        'Using MongoDB for flexibility',
-        'Scalable system for large data volumes',
+        'Langchain + OpenAI + FAISS for embeddings',
+        'Document ingestion pipeline with Flask',
+        'Minimal API usage by decoupling retrieval from generation',
       ],
       technologies: [
-        'Java',
-        'Spring Boot',
-        'MongoDB',
+        'Python',
+        'Flask',
+        'FAISS',
+        'Langchain',
         'OpenAI API',
         'Angular',
-        'TypeScript',
       ],
+      link: 'https://github.com/ipcm27/Summary-AI',
     },
   ];
 

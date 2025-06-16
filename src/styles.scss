@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+*{
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+section{
+  height:fit-content;
+  padding:30px;
+}
+
+.color{
+  color:#E40F36
+}
+
+.title-box{
+  padding-bottom: 15px;;
+
+}
+
+.line{
+  border: 5px solid #E40F36;
+  width:100%;
+}
+
+.btn-main{
+  color: #E40F36;
+  background-color: transparent;
+  border: 1px solid #E40F36;
+  border-radius: 15px;
+  padding: 1.25rem 1.75rem;
+  line-height: 1;
+  text-decoration: none;
+  transition: var(--transition);
+  margin-top: 50px;
+}
+
+.card {
+  background-color: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  padding: 50px 50px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 20px;
+}
+
+
+.btn-main:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.img-box {
+  display: flex;
+  justify-content: center;
+
+  .img-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 25px;
+
+    .profile-picture-wrapper {
+      display: inline-block;
+      transition: transform 0.3s ease-out;
+
+      &:hover {
+        .profile-picture {
+          transform: translateX(10%);
+        }
+
+        .rectangle {
+          transform: translateX(-10%);
+        }
+      }
+    }
+
+    .profile-picture {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+      width: 300px;
+      height: auto;
+      transition: transform 0.3s ease-out;
+      border-radius: 15px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .rectangle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #E40F36;
+      z-index: -1;
+      transition: transform 0.3s ease-out;
+    }
+  }
+}

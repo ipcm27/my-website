@@ -1,13 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
 import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
+  standalone: true,
+  imports: [ CommonModule ],
   styleUrls: ['./skills.component.css'],
 })
-export class SkillsComponent implements OnInit{
-  Skills = ['Java 8', 'JavaScript','TypeScript', 'HTML', 'CSS', 'SQL'];
+export class SkillsComponent implements OnInit {
+  @Input()
+  cardIndex!: number;
+
+  Skills = ['Java', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SQL'];
   Frameworks = [
     'Angular',
     'Spring',
@@ -16,7 +22,7 @@ export class SkillsComponent implements OnInit{
     'Git and Gitflow',
     'Scrum and Agile',
     'RxJS',
-    'Azure cloud',
+    'Cloud',
     'Docker and Kubernetes',
     'MySql, Oracle and Postgres',
     'MongoDb',
@@ -38,5 +44,4 @@ export class SkillsComponent implements OnInit{
     const skillsElement = document.getElementById('skills');
     skillsElement?.scrollIntoView({ behavior: 'smooth' });
   }
-
 }

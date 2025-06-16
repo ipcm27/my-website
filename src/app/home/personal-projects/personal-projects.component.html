@@ -1,33 +1,75 @@
-<section id="personal-projects">
+<section id="projects">
   <div class="d-flex flex-row title-box">
     <h2 id="section-1" class="text-start" data-aos="fade-up">
-      <span class="color">04. </span>Some personal projects
+      <span class="color">{{ cardIndex }}</span><span>. </span>I am Proud Of this:
     </h2>
     <span id="line"></span>
   </div>
   <div class="container row">
-<div class="card">
-  <p-carousel [value]="Projects" [numVisible]="3" [numScroll]="3" [circular]="false"
-    [responsiveOptions]="responsiveOptions">
-    <ng-template let-product pTemplate="item">
-      <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
-        <div class="mb-3">
-          <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name"
-            class="w-6 shadow-2" />
-        </div>
-        <div>
-          <h4 class="mb-1">{{ product.name }}</h4>
-          <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
-          <div class="car-buttons mt-5">
-            <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
-            <p-button type="button" styleClass="p-button-success p-button-rounded mr-2"
-              icon="pi pi-star-fill"></p-button>
+    <p-carousel [value]="projects" [numVisible]="1" [numScroll]="3" [circular]="true" autoplayInterval="10000"
+      [responsiveOptions]="responsiveOptions">
+      <ng-template let-project pTemplate="item">
+        <div class="border-1 surface-border border-round m-2 text-center py-2 px-3">
+          <div class="d-flex flex-column">
+            <div class="mb-3 mx-auto justify-content-center">
+              <img [src]="project.img" alt="{{ project.title }}" class="w-6 shadow-2 img-project my-auto" />
+            </div>
+            <div class="flex-column container project--description--box">
+              <!-- Display the project title -->
+              <h2 class="mb-4"><strong>{{ project.title }}</strong></h2><br>
+
+              <div class="description">
+                <h3><strong>Backend: </strong></h3>
+                <p class="mt-0 mb-4">
+                  {{ project.backend.description }}
+                </p>
+
+                <h3><strong>Frontend: </strong></h3>
+                <p class="mt-0 mb-4">
+                  {{ project.frontend.description }}
+                </p>
+              </div>
+              <div class="description d-flex flex-column align-items-center text-center">
+                <h3 class="mb-2"><strong>Differentials:</strong></h3>
+                <md-chip-set class="chip-group">
+                  <md-suggestion-chip *ngFor="let diff of project.differentials" [label]="diff"
+                    elevated></md-suggestion-chip>
+                </md-chip-set>
+              </div>
+
+              <div class="description d-flex flex-column align-items-center text-center mt-4">
+                <h3 class="mb-2"><strong>Tech Stack:</strong></h3>
+                <div *ngFor="let tech of project.technologies ">
+                  <div class="badge badge-soft badge-secondary">{{ tech }}</div>
+                </div>
+              </div>
+
+
+
+
+
+              <div class="description mb-4">
+                <p class="mt-0 mb-4"><strong>Github: </strong><a [href]='project.link'>{{ project.link }}</a></p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </ng-template>
-  </p-carousel>
-</div>
+      </ng-template>
+    </p-carousel>
   </div>
-
+  <div class="badge badge-primary">Primary</div>
+  <div class="badge badge-secondary">Secondary</div>
+  <div class="badge badge-accent">Accent</div>
+  <div class="badge badge-neutral">Neutral</div>
+  <div class="badge badge-info">Info</div>
+  <div class="badge badge-success">Success</div>
+  <div class="badge badge-warning">Warning</div>
+  <div class="badge badge-error">Error</div>
+  <div class="badge badge-soft badge-primary">Primary</div>
+  <div class="badge badge-soft badge-secondary">Secondary</div>
+  <div class="badge badge-soft badge-accent">Accent</div>
+  <div class="badge badge-soft badge-info">Info</div>
+  <div class="badge badge-soft badge-success">Success</div>
+  <div class="badge badge-soft badge-warning">Warning</div>
+  <div class="badge badge-soft badge-error">Error</div>
 </section>
