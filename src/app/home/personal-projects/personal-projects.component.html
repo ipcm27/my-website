@@ -1,75 +1,67 @@
-<section id="projects">
-  <div class="d-flex flex-row title-box">
-    <h2 id="section-1" class="text-start" data-aos="fade-up">
-      <span class="color">{{ cardIndex }}</span><span>. </span>I am Proud Of this:
-    </h2>
-    <span id="line"></span>
+<section id="projects" class=" justify-center">
+  <!-- Título -->
+  <div class="mb-12">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <h2 class="text-3xl font-bold" data-aos="fade-up">
+        <span class="text-primary">{{ cardIndex }}</span>. I am Proud Of this:
+      </h2>
+      <div class="hidden md:block flex-grow h-px bg-primary opacity-40 ml-4 mt-2"></div>
+    </div>
   </div>
-  <div class="container row">
-    <p-carousel [value]="projects" [numVisible]="1" [numScroll]="3" [circular]="true" autoplayInterval="10000"
-      [responsiveOptions]="responsiveOptions">
-      <ng-template let-project pTemplate="item">
-        <div class="border-1 surface-border border-round m-2 text-center py-2 px-3">
-          <div class="d-flex flex-column">
-            <div class="mb-3 mx-auto justify-content-center">
-              <img [src]="project.img" alt="{{ project.title }}" class="w-6 shadow-2 img-project my-auto" />
-            </div>
-            <div class="flex-column container project--description--box">
-              <!-- Display the project title -->
-              <h2 class="mb-4"><strong>{{ project.title }}</strong></h2><br>
 
-              <div class="description">
-                <h3><strong>Backend: </strong></h3>
-                <p class="mt-0 mb-4">
-                  {{ project.backend.description }}
-                </p>
+  <!-- Grid de projetos -->
+  <div class="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
+    <div *ngFor="let project of projects" class="card bg-base-100 shadow-xl transition-transform hover:scale-[1.01]">
+      <figure class="overflow-hidden aspect-video bg-white flex items-center justify-center rounded-t-xl">
+        <img [src]="project.img" alt="{{ project.title }}"
+          class="max-h-full max-w-full object-contain transition-transform duration-500 hover:scale-105" />
+        </figure>
 
-                <h3><strong>Frontend: </strong></h3>
-                <p class="mt-0 mb-4">
-                  {{ project.frontend.description }}
-                </p>
-              </div>
-              <div class="description d-flex flex-column align-items-center text-center">
-                <h3 class="mb-2"><strong>Differentials:</strong></h3>
-                <md-chip-set class="chip-group">
-                  <md-suggestion-chip *ngFor="let diff of project.differentials" [label]="diff"
-                    elevated></md-suggestion-chip>
-                </md-chip-set>
-              </div>
+      <div class="card-body px-6 py-4">
+        <h2 class="card-title text-xl">{{ project.title }}</h2>
 
-              <div class="description d-flex flex-column align-items-center text-center mt-4">
-                <h3 class="mb-2"><strong>Tech Stack:</strong></h3>
-                <div *ngFor="let tech of project.technologies ">
-                  <div class="badge badge-soft badge-secondary">{{ tech }}</div>
-                </div>
-              </div>
+        <!-- Backend -->
+        <div class="mt-2">
+          <h3 class="text-sm font-semibold">Backend:</h3>
+          <p class="text-sm text-gray-700">{{ project.backend.description }}</p>
+        </div>
 
+        <!-- Frontend -->
+        <div class="mt-2">
+          <h3 class="text-sm font-semibold">Frontend:</h3>
+          <p class="text-sm text-gray-700">{{ project.frontend.description }}</p>
+        </div>
 
-
-
-
-              <div class="description mb-4">
-                <p class="mt-0 mb-4"><strong>Github: </strong><a [href]='project.link'>{{ project.link }}</a></p>
-              </div>
+        <!-- Differentials -->
+        <div class="mt-3">
+          <h3 class="text-sm font-semibold mb-1">Differentials:</h3>
+          <div class="flex flex-wrap gap-2">
+            <div *ngFor="let diff of project.differentials" class="badge badge-outline text-xs">
+              {{ diff }}
             </div>
           </div>
         </div>
-      </ng-template>
-    </p-carousel>
+
+        <!-- Tech Stack -->
+        <div class="mt-3">
+          <h3 class="text-sm font-semibold mb-1">Tech Stack:</h3>
+          <div class="flex flex-wrap gap-2">
+            <div *ngFor="let tech of project.technologies" class="badge badge-secondary text-xs">
+              {{ tech }}
+            </div>
+          </div>
+        </div>
+
+        <!-- GitHub -->
+        <div class="mt-4">
+          <p class="text-sm">
+            <strong>GitHub:</strong>
+            <a [href]="project.link" target="_blank" class="text-primary underline break-all">
+              {{ project.link }}
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="badge badge-primary">Primary</div>
-  <div class="badge badge-secondary">Secondary</div>
-  <div class="badge badge-accent">Accent</div>
-  <div class="badge badge-neutral">Neutral</div>
-  <div class="badge badge-info">Info</div>
-  <div class="badge badge-success">Success</div>
-  <div class="badge badge-warning">Warning</div>
-  <div class="badge badge-error">Error</div>
-  <div class="badge badge-soft badge-primary">Primary</div>
-  <div class="badge badge-soft badge-secondary">Secondary</div>
-  <div class="badge badge-soft badge-accent">Accent</div>
-  <div class="badge badge-soft badge-info">Info</div>
-  <div class="badge badge-soft badge-success">Success</div>
-  <div class="badge badge-soft badge-warning">Warning</div>
-  <div class="badge badge-soft badge-error">Error</div>
 </section>

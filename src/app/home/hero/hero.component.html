@@ -1,23 +1,37 @@
-<section id="home" class="main d-flex justify-content-center flex-column">
-  <div>
-    <div class="container mx-auto d-flex flex-md-row flex-column">
-      <div class="col-12 col-md-8 d-flex flex-column justify-content-center">
-        <h6 class="color">Hi, My name is</h6>
-        <h1 class="title">Igor Pierre Miranda</h1>
-        <h2 class="sub-title">The Best Fullstack developer for Your Needs</h2>
-        <p>
-          I design scalable, efficient, and elegant digital systems — from microservices to AI-powered tools.<br><br>
-    </p>
-        <button class="btn btn-main " ><a href="/#projects">See what I can build</a></button>
+<section id="home" class="hero px-4 py-12">
+  <div class="text-center md:text-left">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-8 max-w-12xl mx-auto">
+
+      <!-- Texto -->
+      <div class="w-full md:w-1/2">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">
+          Hi, My name is <span class="text-primary">Igor Pierre Miranda</span>
+        </h1>
+
+        <h4 class="text-xl mb-6">Java / Angular Fullstack developer</h4>
+        <p class="mt-2 text-gray-700">
+          I design scalable, efficient, and elegant digital systems — from microservices to AI-powered tools.
+        </p>
+
+        <button class="btn btn-primary mt-6">
+          <a href="/#projects">See what I can build</a>
+        </button>
       </div>
-      <div class="img-box col-12 col-md-4 d-flex justify-content-center">
-        <div class="img-wrapper mx-auto">
-          <div class="profile-picture-wrapper">
-            <img src="assets/IMG_3443.jpeg" class="profile-picture d-block mx-auto" alt="">
-          </div>
-          <div class="rectangle"></div>
-        </div>
+
+      <!-- Imagens -->
+      <div class="relative w-full max-w-[600px] h-[300px]">
+        <img src="assets/IMG_3443.jpeg"
+          class="absolute top-0 right-44 md:left-[0px] w-40 md:w-64 rounded-xl shadow-xl ring-4 ring-white rotate-2 z-10" alt="">
+
+        <img src="assets/f93dae42-4ce1-4fba-8ae6-7d603a325c0a.JPEG"
+          class="absolute top-16 left-20 md:left-[200px] w-40 md:w-64 rounded-xl shadow-xl ring-4 ring-white -rotate-2 z-20"
+          alt="">
+
+        <img src="assets/IMG_1566.JPEG"
+          class="absolute top-36 left-44 md:left-[400px] md:top-[8px] w-40 md:w-64 rounded-xl shadow-xl ring-4 ring-white rotate-1 z-30"
+          alt="">
       </div>
+
     </div>
   </div>
 </section>

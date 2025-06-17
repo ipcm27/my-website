@@ -1,34 +1,103 @@
-<section id="career">
-  <div class="d-flex flex-row title-box">
-    <h2 id="section-1" class="text-start">
-      <span class="color" data-aos="fade-up">{{ cardIndex }}</span>
-      <span>. </span>
-      Career
-    </h2>
-  </div>
-    <div class="d-flex flex-row mb-2">
-      <h6 class="me-2">Total Experience time:  </h6>
-      <h6 id="line">{{ totalExperience }}</h6>
-    </div>
+<section id="dev-journey" class="py-12 px-6 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-bold text-primary mb-10">💻 My Dev Journey (with Mild Chaos)</h2>
 
-  <div class="d-flex flex-row" data-aos="fade-up">
-    <ul>
-      <li *ngFor="let role of roles">
-        <button class="btn btn-carrer" [id]="role.id" (click)="selectRole(role.id)" (mouseenter)="selectRole(role.id)"
-          [ngClass]="{'selected': role.id === selectedRoleId}">
-          {{ role.title }}
-        </button>
-      </li>
-    </ul>
-    <div class="container">
-      <div *ngFor="let role of roles" class="" [id]="role.id">
-        <div *ngIf="role.id === selectedRoleId">
-          <h5 data-aos="fade-up">{{ role.company }}</h5>
-          <h6 data-aos="fade-up">{{ role.time }}</h6>
-          <p style="white-space: pre-line" data-aos="fade-up">{{ role.text }}</p>
-        </div>
+  <ul class="timeline timeline-vertical">
+    <li>
+      <div class="timeline-start timeline-box">
+        🎓 <strong>Business Degree – Universidade de Pernambuco</strong><br>
+        <span class="text-sm text-gray-500">2014 – 2019 | Brazil</span>
+        <p class="text-sm text-gray-600 mt-2">
+          Graduated in Business and went straight into the thrilling world of retail banking.
+          Mastered the art of selling capitalization bonds and pretending cold calls were fun.
+        </p>
       </div>
+      <div class="timeline-middle">📊</div>
+      <div class="timeline-end timeline-box">
+        Then the pandemic hit. I traded Excel for VS Code. No regrets.
+      </div>
+      </li>
+      <hr/>
+    <!-- Bootcamp -->
+    <li>
+      <div class="timeline-start timeline-box">
+        👨‍💻 <strong>Bootcamp – Let's Code / Ada</strong><br>
+        <span class="text-sm text-gray-500">2021 | Brazil</span>
+        <p class="text-sm text-gray-600 mt-2">
+          Decided to give code a shot and applied to a bootcamp.
+          Turns out 40,000 people had the same idea. 200 got in. I had no idea what a for-loop was, but they let me in anyway.
+          Spent 6 months learning Java, HTML, and how to cry in CSS.
+        </p>
+      </div>
+      <div class="timeline-middle">🧪</div>
+      <div class="timeline-end timeline-box">
+        Realized I prefer debugging code over debugging clients.
+      </div>
+    </li>
+
+    <hr />
+
+    <!-- Reachr -->
+    <li>
+      <div class="timeline-start timeline-box">
+        🧠 <strong>Software Engineer – Reachr</strong><br>
+        <span class="text-sm text-gray-500">2021 – 2023 | Remote</span>
+        <p class="text-sm text-gray-600 mt-2">
+          Joined a startup. Wrote frontend that didn't look like 2009.
+          Built a LinkedIn scraper, automated landing pages, stopped bots with CAPTCHA.
+          Basically made the company money while Google was still indexing the homepage.
+        </p>
+      </div>
+      <div class="timeline-middle">🚀</div>
+      <div class="timeline-end timeline-box">
+        Went from "junior dev" to "the guy who knows why it's broken."
+      </div>
+    </li>
+
+    <hr />
+
+    <!-- Adentis -->
+    <li>
+      <div class="timeline-start timeline-box">
+        🔧 <strong>Software Engineer – Adentis</strong><br>
+        <span class="text-sm text-gray-500">2022 – 2023 | Remote</span>
+        <p class="text-sm text-gray-600 mt-2">
+          Entered the telecom world. Built batch jobs that no human ever reads but the system loves.
+          Wrote APIs, deployed containers, drank way too much coffee.
+        </p>
+      </div>
+      <div class="timeline-middle">📦</div>
+      <div class="timeline-end timeline-box">
+        Learned microservices. And micro-patience.
+      </div>
+    </li>
+
+    <hr />
+
+    <!-- Natixis -->
+    <li>
+      <div class="timeline-start timeline-box">
+        💼 <strong>Software Engineer – Natixis (BPCE)</strong><br>
+        <span class="text-sm text-gray-500">2023 – Present | Portugal</span>
+        <p class="text-sm text-gray-600 mt-2">
+          Built a Value at Risk platform used by 2,000+ users (yes, with Java and Spring Boot — the adult stuff).
+          Developed an AI news tracker that actually understands headlines (and doesn’t freak out like humans).
+          Placed 2nd in a hackathon with a Retrieval-Augmented Generation system that answered support questions better than
+          our docs.
+          Currently leading a tool to monitor credit exposure breaches, with automated alerts and audit-friendly dashboards.
+        </p>
+      </div>
+      <div class="timeline-middle">🧠</div>
+      <div class="timeline-end timeline-box">
+        Caught between being “the AI guy” and “the backend microservices dude.”
+        Still undecided. Still delivering.
+      </div>
+      </li>
+
+  </ul>
+
+  <div class="mt-10 text-center">
+    <div class="badge badge-lg badge-primary">
+      From finance bro to fullstack dev. Still not over semicolons.
     </div>
   </div>
-
 </section>
