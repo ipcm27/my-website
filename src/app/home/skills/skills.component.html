@@ -1,36 +1,52 @@
 <section id="skills" class="py-12 px-6 max-w-6xl mx-auto">
-  <div class="mb-10">
-    <h2 class="text-3xl font-bold text-primary" data-aos="fade-up">
-      <span class="text-primary">{{ cardIndex }}</span><span>. </span>Skills
+  <!-- Heading -->
+  <div class="mb-5">
+    <h2 class="text-3xl font-bold text-primary" >
+       Skills
     </h2>
     <div class="mt-2 h-px bg-primary w-24 opacity-40"></div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <!-- Grid of cards -->
+  <div class="grid  grid-cols-1 md:grid-cols-2 ">
 
     <!-- Coding Languages -->
-    <div class="card bg-base-100 shadow-md" data-aos="fade-up">
+    <div class="!mb-0" >
+      <div class="card bg-base-100 shadow-md">
       <div class="card-body">
         <h3 class="card-title text-lg text-primary">🧠 Coding Languages</h3>
         <div class="flex flex-wrap gap-3 mt-4">
-          <div *ngFor="let Skill of Skills" class="badge badge-outline text-sm px-3 py-2">
-            {{ Skill }}
+          <span *ngFor="let s of skills" class="badge badge-outline text-sm px-3 py-2">
+            {{ s }}
+          </span>
+        </div>
+      </div>
+    </div>
+      <div class="card bg-base-100 shadow-md" >
+        <div class="card-body">
+          <h3 class="card-title text-lg text-primary">🌍 Languages</h3>
+          <div class="flex flex-wrap gap-3 mt-4">
+            <span *ngFor="let l of spoken" class="badge badge-outline text-sm px-3 py-2">
+              {{ l }}
+            </span>
           </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Frameworks / Tools -->
+    <div class="card bg-base-100 shadow-md" >
+      <div class="card-body">
+        <h3 class="card-title text-lg text-primary">🧩 Frameworks, Tools & Systems</h3>
+        <div class="flex flex-wrap gap-3 mt-4">
+          <span *ngFor="let f of frameworks " class="badge badge-secondary text-sm px-3 py-2 h-auto">
+            {{ f }}
+          </span>
         </div>
       </div>
     </div>
 
-    <!-- Frameworks & Tools -->
-    <div class="card bg-base-100 shadow-md" data-aos="fade-up">
-      <div class="card-body">
-        <h3 class="card-title text-lg text-primary">🧩 Frameworks, Tools & Systems</h3>
-        <div class="flex flex-wrap gap-3 mt-4">
-          <div *ngFor="let Framework of Frameworks" class="badge badge-secondary text-sm px-3 py-2">
-            {{ Framework }}
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Spoken Languages -->
 
   </div>
 </section>

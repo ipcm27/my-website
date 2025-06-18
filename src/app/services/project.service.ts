@@ -11,56 +11,69 @@ export class ProjectService {
     {
       title: 'Zilla Order - Microservices E-commerce',
       img: '/assets/projects/zilla-order.png',
+
       backend: {
         description:
-          'Distributed microservices architecture for order, product, and inventory management, each with independent databases and scalable deployment.',
+          'Distributed microservices for order, product and inventory management. Each service has its own database, publishes domain events via Kafka and is hardened with Resilience4j for retries, circuit-breakers and rate-limiting. Observability via Logstash + Kibana and containerised deployment (Docker / Kubernetes).',
       },
+
       frontend: {
         description:
-          'Interface for managing products, placing orders, and viewing real-time inventory, with clean UX and Angular + Tailwind stack.',
+          'Lightweight Angular dashboard for basic product and order flows; focus remains on robust back-end services.',
       },
+
       differentials: [
-        'MongoDB (Product), PostgreSQL (Order & Inventory)',
-        'Dockerized microservices with Kubernetes-ready setup',
-        'Scalable APIs with Spring Boot',
+        'Kafka event-driven communication',
+        'Resilience4j fault-tolerance (circuit-breaker, retries)',
+        'MongoDB (Product) + PostgreSQL (Order & Inventory)',
+        'Containerised with Docker; Helm-ready Kubernetes manifests',
+        'Centralised logging/metrics with Logstash + Kibana',
+        'Scalable REST APIs built with Spring Boot',
       ],
+
       technologies: [
         'Java',
         'Spring Boot',
+        'Kafka',
+        'Resilience4j',
         'PostgreSQL',
         'MongoDB',
         'Docker',
+        'Kubernetes',
+        'Logstash',
+        'Kibana',
         'Angular',
-        'RxJS',
-        'TailwindCSS',
       ],
+
       link: 'https://github.com/ipcm27/Zilla-Order',
     },
     {
-      title: 'Summary AI - Internal Assistant with RAG',
+      title: 'Fetch & Flex - AI Agent with RAG',
       img: '/assets/projects/rag-model.webp',
       backend: {
         description:
-          'RAG (Retrieval-Augmented Generation) assistant using vector databases for semantic search and OpenAI API to generate contextual responses.',
+          'AI agent combining Retrieval-Augmented Generation (RAG) with a vector database for semantic search, using Langchain and OpenAI APIs to generate contextual answers from internal documents.',
       },
       frontend: {
         description:
-          'Simple chat interface to query internal documents with real-time answers and traceable source links.',
+          'Clean and responsive chat interface to ask questions and receive AI-generated answers with source highlighting and tool-triggered actions.',
       },
       differentials: [
-        'Langchain + OpenAI + FAISS for embeddings',
-        'Document ingestion pipeline with Flask',
-        'Minimal API usage by decoupling retrieval from generation',
+        'Langchain-based agent with custom tools and memory',
+        'Semantic search using vector DB (Chroma/FAISS)',
+        'Document ingestion pipeline with PDF/Markdown support',
+        'Minimal API usage: retrieval and generation are decoupled',
+        'Agent capable of summarizing, saving or exporting answers',
       ],
       technologies: [
         'Python',
         'Flask',
-        'FAISS',
         'Langchain',
+        'Chroma / FAISS',
         'OpenAI API',
         'Angular',
       ],
-      link: 'https://github.com/ipcm27/Summary-AI',
+      link: 'https://github.com/ipcm27/fetch-flex-rag-ai-agent',
     },
   ];
 

@@ -96,6 +96,11 @@
       }
     }
   },
+  "schematics": {
+    "@schematics/angular:component": {
+      "standalone": true
+    }
+  },
   "cli": {
     "analytics": "703cce10-0714-4f24-95eb-449b82c62bb5"
   }

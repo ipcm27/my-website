@@ -5,12 +5,13 @@ import { CareerComponent } from './career/career.component';
 import { HeroComponent } from './hero/hero.component';
 import { SkillsComponent } from './skills/skills.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   standalone: true,
-  imports: [CommonModule, PersonalProjectsComponent, CareerComponent, HeroComponent, SkillsComponent, AboutMeComponent],
+  imports: [CommonModule, PersonalProjectsComponent, AboutMeComponent, CareerComponent, HeroComponent, SkillsComponent, AboutMeComponent, FooterComponent],
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {}

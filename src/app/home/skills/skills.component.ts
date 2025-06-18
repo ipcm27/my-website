@@ -6,42 +6,54 @@ import { NavigationService } from 'src/app/services/navigation.service';
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   standalone: true,
-  imports: [ CommonModule ],
+  imports: [CommonModule],
   styleUrls: ['./skills.component.css'],
 })
 export class SkillsComponent implements OnInit {
-  @Input()
-  cardIndex!: number;
+  @Input() cardIndex!: number;
 
-  Skills = ['Java', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SQL'];
-  Frameworks = [
-    'Angular',
-    'Spring',
-    'Bootstrap',
-    'Material',
-    'Git and Gitflow',
-    'Scrum and Agile',
-    'RxJS',
-    'Cloud',
-    'Docker and Kubernetes',
-    'MySql, Oracle and Postgres',
-    'MongoDb',
-    'JUnit, Karma and Jasmine',
-    'REST & SOAP',
-    'Apache Tomcat and Glassfish',
-    'CI/CD',
-    'MIcroservices and SOA',
+  // ── Coding languages ──────────────────────────────────────────────
+  skills: string[] = [
+    'Java 8+',
+    'JavaScript',
+    'TypeScript',
+    'Python (basic)',
+    'SQL',
+    'HTML',
+    'CSS',
   ];
+
+  // ── Frameworks / Tools / Systems ──────────────────────────────────
+  frameworks: string[] = [
+    'Spring Boot',
+    'Angular 12+ / AngularJS',
+    'RAG / LLM integration',
+    'RxJS & NgRx',
+    'Bootstrap / Material UI',
+    'JUnit • Mockito • Karma • Jasmine',
+    'Docker & Kubernetes',
+    'PostgreSQL / MongoDB',
+    'Git & GitFlow',
+    'CI/CD pipelines',
+    'Microservices & SOA',
+    'Scrum & Agile',
+  ];
+
+  // ── Languages (spoken) ────────────────────────────────────────────
+  spoken: string[] = [
+    'Portuguese – Native',
+    'English – Fluent',
+    'Spanish – B2',
+    'French – Beginner',
+  ];
+
   constructor(private navigationService: NavigationService) {}
 
   ngOnInit(): void {
-    this.navigationService.scroll$.subscribe(() => {
-      this.scrollToSection();
-    });
+    this.navigationService.scroll$.subscribe(() => this.scrollToSection());
   }
 
-  scrollToSection(): void {
-    const skillsElement = document.getElementById('skills');
-    skillsElement?.scrollIntoView({ behavior: 'smooth' });
+  private scrollToSection(): void {
+    document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
   }
 }

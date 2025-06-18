@@ -1,35 +1,56 @@
-<section id="home" class="hero px-4 py-12">
+<section id="home" class="hero px-4 py-16">
   <div class="text-center md:text-left">
-    <div class="flex flex-col md:flex-row justify-center items-center gap-8 max-w-12xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-8 max-w-6xl mx-auto">
 
       <!-- Texto -->
       <div class="w-full md:w-1/2">
-        <h1 class="text-3xl md:text-4xl font-bold mb-4">
-          Hi, My name is <span class="text-primary">Igor Pierre Miranda</span>
-        </h1>
-
-        <h4 class="text-xl mb-6">Java / Angular Fullstack developer</h4>
-        <p class="mt-2 text-gray-700">
-          I design scalable, efficient, and elegant digital systems — from microservices to AI-powered tools.
+        <!-- Top tagline -->
+        <p class="uppercase text-sm text-primary font-semibold tracking-widest mb-2">
+          Fullstack Dev — Backend-first
         </p>
 
+        <!-- Nome e título -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-2">
+          Hi, my name is <span class="text-primary">Igor Pierre Miranda</span>
+        </h1>
+
+        <!-- Frase de impacto -->
+        <p class="text-md italic text-gray-500 mb-6">
+          "I build scalable systems that leave the backlog and reach production."
+        </p>
+
+        <!-- Subtítulo -->
+        <!-- <h4 class="text-xl mb-6">Java / Angular Fullstack Developer</h4> -->
+
+        <!-- Descrição -->
+        <!-- <p class="mt-2 text-gray-700">
+          I design robust backends, clean UIs, and intelligent systems — combining engineering discipline with product
+          sense.
+        </p> -->
+
+        <!-- Botão CTA -->
         <button class="btn btn-primary mt-6">
           <a href="/#projects">See what I can build</a>
         </button>
       </div>
 
-      <!-- Imagens -->
-      <div class="relative w-full max-w-[600px] h-[300px]">
-        <img src="assets/IMG_3443.jpeg"
-          class="absolute top-0 right-44 md:left-[0px] w-40 md:w-64 rounded-xl shadow-xl ring-4 ring-white rotate-2 z-10" alt="">
+      <!-- Stack cards -->
+      <div class="w-full md:w-1/2 flex flex-col items-center md:items-start gap-4" data-aos="fade-up">
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+          <div class="p-4 bg-base-200 rounded-xl shadow-md hover:scale-105 transition">
+            <p class="text-sm text-gray-600">Java & Spring Boot</p>
+          </div>
+          <div class="p-4 bg-base-200 rounded-xl shadow-md hover:scale-105 transition">
+            <p class="text-sm text-gray-600">Angular & RxJS</p>
+          </div>
+          <div class="p-4 bg-base-200 rounded-xl shadow-md hover:scale-105 transition">
+            <p class="text-sm text-gray-600">SQL & NoSQL Databases</p>
+          </div>
+        </div>
 
-        <img src="assets/f93dae42-4ce1-4fba-8ae6-7d603a325c0a.JPEG"
-          class="absolute top-16 left-20 md:left-[200px] w-40 md:w-64 rounded-xl shadow-xl ring-4 ring-white -rotate-2 z-20"
-          alt="">
-
-        <img src="assets/IMG_1566.JPEG"
-          class="absolute top-36 left-44 md:left-[400px] md:top-[8px] w-40 md:w-64 rounded-xl shadow-xl ring-4 ring-white rotate-1 z-30"
-          alt="">
+        <div class="mt-4 text-sm text-gray-500 text-center md:text-left max-w-lg">
+           Focused on performance, clean architecture, and delivering systems that scale.
+        </div>
       </div>
 
     </div>
