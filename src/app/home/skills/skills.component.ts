@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input, OnInit } from '@angular/core';
 import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
     selector: 'app-skills',
     templateUrl: './skills.component.html',
-    imports: [CommonModule],
+    imports: [],
     styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {

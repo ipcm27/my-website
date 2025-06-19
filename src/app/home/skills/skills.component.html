@@ -2,7 +2,7 @@
   <!-- Heading -->
   <div class="mb-5">
     <h2 class="text-3xl font-bold text-primary" >
-       Skills
+      Skills
     </h2>
     <div class="mt-2 h-px bg-primary w-24 opacity-40"></div>
   </div>
@@ -13,25 +13,29 @@
     <!-- Coding Languages -->
     <div class="!mb-0" >
       <div class="card bg-base-100 shadow-md">
-      <div class="card-body">
-        <h3 class="card-title text-lg text-primary">🧠 Coding Languages</h3>
-        <div class="flex flex-wrap gap-3 mt-4">
-          <span *ngFor="let s of skills" class="badge badge-outline text-sm px-3 py-2">
-            {{ s }}
-          </span>
+        <div class="card-body">
+          <h3 class="card-title text-lg text-primary">🧠 Coding Languages</h3>
+          <div class="flex flex-wrap gap-3 mt-4">
+            @for (s of skills; track s) {
+              <span class="badge badge-outline text-sm px-3 py-2">
+                {{ s }}
+              </span>
+            }
+          </div>
         </div>
       </div>
-    </div>
       <div class="card bg-base-100 shadow-md" >
         <div class="card-body">
           <h3 class="card-title text-lg text-primary">🌍 Languages</h3>
           <div class="flex flex-wrap gap-3 mt-4">
-            <span *ngFor="let l of spoken" class="badge badge-outline text-sm px-3 py-2">
-              {{ l }}
-            </span>
+            @for (l of spoken; track l) {
+              <span class="badge badge-outline text-sm px-3 py-2">
+                {{ l }}
+              </span>
+            }
           </div>
         </div>
-        </div>
+      </div>
     </div>
 
     <!-- Frameworks / Tools -->
@@ -39,9 +43,11 @@
       <div class="card-body">
         <h3 class="card-title text-lg text-primary">🧩 Frameworks, Tools & Systems</h3>
         <div class="flex flex-wrap gap-3 mt-4">
-          <span *ngFor="let f of frameworks " class="badge badge-secondary text-sm px-3 py-2 h-auto">
-            {{ f }}
-          </span>
+          @for (f of frameworks ; track f) {
+            <span class="badge badge-secondary text-sm px-3 py-2 h-auto">
+              {{ f }}
+            </span>
+          }
         </div>
       </div>
     </div>

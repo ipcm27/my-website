@@ -11,62 +11,61 @@
 
   <!-- Grid de projetos -->
   <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 justify-items-center">
-    <div *ngFor="let project of projects"
-      class="card !m-0 !sm:m-10 bg-base-100 shadow-xl transition-transform hover:scale-[1.01] w-full max-w-100px]">
-
-      <!-- Imagem -->
-      <figure class="overflow-hidden aspect-video bg-white flex items-center justify-center rounded-t-xl">
-        <img [src]="project.img" alt="{{ project.title }}"
-          class="max-h-full max-w-full object-contain transition-transform duration-500 hover:scale-105" />
-      </figure>
-
-      <!-- Conteúdo do card -->
-      <div class="card-body px-4 py-4 sm:px-5 sm:py-6">
-        <h2 class="card-title text-lg sm:text-xl">{{ project.title }}</h2>
-
-        <!-- Backend -->
-        <div class="mt-2">
-          <h3 class="text-sm font-semibold">Backend:</h3>
-          <p class="text-sm text-gray-700">{{ project.backend.description }}</p>
-        </div>
-
-        <!-- Frontend -->
-        <div class="mt-2">
-          <h3 class="text-sm font-semibold">Frontend:</h3>
-          <p class="text-sm text-gray-700">{{ project.frontend.description }}</p>
-        </div>
-
-        <!-- Differentials -->
-        <div class="mt-3">
-          <h3 class="text-sm font-semibold mb-1">Differentials:</h3>
-          <div class="flex flex-wrap gap-2">
-            <div *ngFor="let diff of project.differentials" class="badge badge-outline text-xs h-auto p-1">
-              {{ diff }}
+    @for (project of projects; track project) {
+      <div
+        class="card !m-0 !sm:m-10 bg-base-100 shadow-xl transition-transform hover:scale-[1.01] w-full max-w-100px]">
+        <!-- Imagem -->
+        <figure class="overflow-hidden aspect-video bg-white flex items-center justify-center rounded-t-xl">
+          <img [src]="project.img" alt="{{ project.title }}"
+            class="max-h-full max-w-full object-contain transition-transform duration-500 hover:scale-105" />
+        </figure>
+        <!-- Conteúdo do card -->
+        <div class="card-body px-4 py-4 sm:px-5 sm:py-6">
+          <h2 class="card-title text-lg sm:text-xl">{{ project.title }}</h2>
+          <!-- Backend -->
+          <div class="mt-2">
+            <h3 class="text-sm font-semibold">Backend:</h3>
+            <p class="text-sm text-gray-700">{{ project.backend.description }}</p>
+          </div>
+          <!-- Frontend -->
+          <div class="mt-2">
+            <h3 class="text-sm font-semibold">Frontend:</h3>
+            <p class="text-sm text-gray-700">{{ project.frontend.description }}</p>
+          </div>
+          <!-- Differentials -->
+          <div class="mt-3">
+            <h3 class="text-sm font-semibold mb-1">Differentials:</h3>
+            <div class="flex flex-wrap gap-2">
+              @for (diff of project.differentials; track diff) {
+                <div class="badge badge-outline text-xs h-auto p-1">
+                  {{ diff }}
+                </div>
+              }
             </div>
           </div>
-        </div>
-
-        <!-- Tech Stack -->
-        <div class="mt-3">
-          <h3 class="text-sm font-semibold mb-1">Tech Stack:</h3>
-          <div class="flex flex-wrap gap-2">
-            <div *ngFor="let tech of project.technologies" class="badge badge-secondary text-xs">
-              {{ tech }}
+          <!-- Tech Stack -->
+          <div class="mt-3">
+            <h3 class="text-sm font-semibold mb-1">Tech Stack:</h3>
+            <div class="flex flex-wrap gap-2">
+              @for (tech of project.technologies; track tech) {
+                <div class="badge badge-secondary text-xs">
+                  {{ tech }}
+                </div>
+              }
             </div>
           </div>
-        </div>
-
-        <!-- GitHub -->
-        <div class="mt-4">
-          <p class="text-sm break-words">
-            <strong>GitHub:</strong>
-            <a [href]="project.link" target="_blank" class="text-primary underline break-all">
-              {{ project.link }}
-            </a>
-          </p>
+          <!-- GitHub -->
+          <div class="mt-4">
+            <p class="text-sm break-words">
+              <strong>GitHub:</strong>
+              <a [href]="project.link" target="_blank" class="text-primary underline break-all">
+                {{ project.link }}
+              </a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    }
   </div>
 
   <button class="btn btn-primary btn-lg md:btn-2xl mt-10 mx-auto ">

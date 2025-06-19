@@ -1,4 +1,4 @@
-import { CommonModule, ViewportScroller } from '@angular/common';
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CvService } from 'src/app/services/cv.service';
@@ -7,7 +7,7 @@ import { NavigationService } from 'src/app/services/navigation.service';
 @Component({
     selector: 'app-hero',
     templateUrl: './hero.component.html',
-    imports: [CommonModule],
+    imports: [],
     styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit {

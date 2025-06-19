@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input, OnInit } from '@angular/core';
 import * as moment from 'moment';
 import { Role } from 'src/app/interfaces/roles';
@@ -7,7 +7,7 @@ import { CareerService } from 'src/app/services/career.service';
 @Component({
     selector: 'app-career',
     templateUrl: './career.component.html',
-    imports: [CommonModule],
+    imports: [],
     styleUrls: ['./career.component.css']
 })
 export class CareerComponent implements OnInit {
