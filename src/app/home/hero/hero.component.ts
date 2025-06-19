@@ -1,6 +1,7 @@
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CvService } from 'src/app/services/cv.service';
 import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
@@ -11,7 +12,10 @@ import { NavigationService } from 'src/app/services/navigation.service';
   styleUrls: ['./hero.component.css'],
 })
 export class HeroComponent implements OnInit {
-  constructor(private navigationService: NavigationService) {}
+  constructor(
+    private navigationService: NavigationService,
+    private cvService: CvService
+  ) {}
 
   ngOnInit() {
     this.navigationService.scroll$.subscribe(() => {
@@ -24,11 +28,6 @@ export class HeroComponent implements OnInit {
   }
 
   downloadCV() {
-    const link = document.createElement('a');
-    link.setAttribute('href', 'assets/Files/Cv-Igor-Pierre-RED.pdf');
-    link.setAttribute('download', 'Cv-Igor-Pierre-RED.pdf');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    this.cvService.downloadCV();
   }
 }

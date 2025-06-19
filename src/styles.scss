@@ -6,7 +6,12 @@
   font-family: 'Montserrat', sans-serif !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 section{
+  padding-top: 80px !important;
   height:fit-content;
   padding:30px 50px;
 }

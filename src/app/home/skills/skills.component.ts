@@ -27,16 +27,16 @@ export class SkillsComponent implements OnInit {
   frameworks: string[] = [
     'Spring Boot',
     'Angular 12+ / AngularJS',
+    'SQL & NoSQL Databases',
+    'Scrum & Agile',
+    'JUnit • Mockito • Karma • Jasmine',
     'RAG / LLM integration',
     'RxJS & NgRx',
     'Bootstrap / Material UI',
-    'JUnit • Mockito • Karma • Jasmine',
     'Docker & Kubernetes',
-    'PostgreSQL / MongoDB',
     'Git & GitFlow',
     'CI/CD pipelines',
-    'Microservices & SOA',
-    'Scrum & Agile',
+    'Microservices',
   ];
 
   // ── Languages (spoken) ────────────────────────────────────────────

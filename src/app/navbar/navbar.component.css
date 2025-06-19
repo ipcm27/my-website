@@ -1,8 +1,15 @@
 .logo{
-  width:100px;
-
+  width:150px;
 }
 
 .radius{
   border-radius: 15px;
+}
+
+@media (max-width: 639px) {
+  .logo {
+      width: 250px !important;
+
+    }
+
 }
