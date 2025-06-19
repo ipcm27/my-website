@@ -1,9 +1,10 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-gradient',
-  templateUrl: './gradient.component.html',
-  styleUrls: ['./gradient.component.css'],
+    selector: 'app-gradient',
+    templateUrl: './gradient.component.html',
+    styleUrls: ['./gradient.component.css'],
+    standalone: false
 })
 export class GradientComponent {
   @ViewChild('gradient', { static: true })

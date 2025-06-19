@@ -6,12 +6,11 @@ import { Project } from 'src/app/interfaces/projects';
 import {ProjectService} from "src/app/services/project.service"
 
 @Component({
-  selector: 'app-personal-projects',
-  standalone: true,
-  imports: [CommonModule, CarouselModule, ButtonModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  templateUrl: './personal-projects.component.html',
-  styleUrls: ['./personal-projects.component.scss'],
+    selector: 'app-personal-projects',
+    imports: [CommonModule, CarouselModule, ButtonModule],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    templateUrl: './personal-projects.component.html',
+    styleUrls: ['./personal-projects.component.scss']
 })
 export class PersonalProjectsComponent {
   @Input()

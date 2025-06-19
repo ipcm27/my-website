@@ -5,11 +5,10 @@ import { Role } from 'src/app/interfaces/roles';
 import { CareerService } from 'src/app/services/career.service';
 
 @Component({
-  selector: 'app-career',
-  templateUrl: './career.component.html',
-  standalone: true,
-  imports: [CommonModule],
-  styleUrls: ['./career.component.css'],
+    selector: 'app-career',
+    templateUrl: './career.component.html',
+    imports: [CommonModule],
+    styleUrls: ['./career.component.css']
 })
 export class CareerComponent implements OnInit {
   @Input()

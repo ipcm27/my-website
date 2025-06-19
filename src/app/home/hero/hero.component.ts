@@ -5,11 +5,10 @@ import { CvService } from 'src/app/services/cv.service';
 import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
-  selector: 'app-hero',
-  templateUrl: './hero.component.html',
-  standalone: true,
-  imports: [CommonModule],
-  styleUrls: ['./hero.component.css'],
+    selector: 'app-hero',
+    templateUrl: './hero.component.html',
+    imports: [CommonModule],
+    styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit {
   constructor(

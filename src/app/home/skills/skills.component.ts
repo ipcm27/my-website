@@ -3,11 +3,10 @@ import { Component, Input, OnInit } from '@angular/core';
 import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
-  selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  standalone: true,
-  imports: [CommonModule],
-  styleUrls: ['./skills.component.css'],
+    selector: 'app-skills',
+    templateUrl: './skills.component.html',
+    imports: [CommonModule],
+    styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
   @Input() cardIndex!: number;
