@@ -3,15 +3,9 @@
 
 }
 
-.sub-title {
-  font-size: 27px;
-}
 
-.card {
-  background-color: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-  padding: 50px 50px;
-  border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.img-wrapper{
+
 }
 
 .btn-main {
@@ -19,71 +13,5 @@
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)
 }
 
-.btn-main:hover {
 
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
 
-.arrow-container {
-  position: relative;
-  top: -150px
-}
-
-.material-symbols-outlined {
-  font-size: 100px;
-  color: white;
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 100,
-    'GRAD' 0,
-    'opsz' 10
-}
-
-.img-box {
-  display: flex;
-  justify-content: center;
-
-  .img-wrapper {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    padding: 25px;
-
-    .profile-picture-wrapper {
-      display: inline-block;
-      transition: transform 0.3s ease-out;
-
-      &:hover {
-        .profile-picture {
-          transform: translateX(10%);
-        }
-
-        .rectangle {
-          transform: translateX(-10%);
-        }
-      }
-    }
-
-    .profile-picture {
-      visibility: visible;
-      opacity: 1;
-      display: block;
-      width: 300px;
-      height: auto;
-      transition: transform 0.3s ease-out;
-      border-radius: 15px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-
-    .rectangle {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 2px solid red;
-      z-index: -1;
-      transition: transform 0.3s ease-out;
-    }
-  }
-}

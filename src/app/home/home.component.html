@@ -1,9 +1,10 @@
 
-<div class="container d-flex flex-column">
-  <app-hero class="card"></app-hero>
-  <app-about-me class="card"></app-about-me>
-  <app-skills class="card"></app-skills>
-  <app-career class="card"></app-career>
-  <app-personal-projects class="card"></app-personal-projects>
-  <app-recommendations class="card"></app-recommendations>
+<div class="flex flex-col justify-center">
+  <app-hero class="card bg-base-200" ></app-hero>
+  <app-about-me class="card bg-base-200"></app-about-me>
+  <app-personal-projects class="" [cardIndex]="1"></app-personal-projects>
+  <app-skills class="card bg-base-200" [cardIndex]="3"></app-skills>
+  <app-career class="card bg-base-200" [cardIndex]="2"></app-career>
+  <app-contact-me></app-contact-me>
+  <app-footer></app-footer>
 </div>

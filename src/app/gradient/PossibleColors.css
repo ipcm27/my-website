@@ -1,0 +1,98 @@
+  /*
+ #FF6F61 (laranja avermelhado): Energia, ação e emoção.
+#FFD700 (amarelo ouro): Inspiração e inovação.
+#00BFFF (azul brilhante): Tecnologia e avanço.
+#7B68EE (roxo suave): Criatividade e imaginação.
+#32CD32 (verde limão): Renovação e frescor.
+#FF4500 (laranja forte): Entusiasmo e motivação.
+#1E90FF (azul dodger): Inovação digital.
+#9400D3 (roxo escuro): Imaginação profunda e inovação disruptiva.
+#ADFF2F (verde claro): Crescimento e ideias sustentáveis.
+#FF1493 (rosa forte): Originalidade e inovação artística.
+#00FA9A (verde menta): Frescor e novas abordagens.
+#6A5ACD (azul royal): Criatividade estruturada e confiável.
+#F08080 (vermelho claro): Paixão criativa.
+#40E0D0 (turquesa): Ideias fluídas e inovadoras.
+#8A2BE2 (roxo elétrico): Criatividade ousada e vanguardista.
+*/
+.significado{
+  background:linear-gradient(120deg,
+      #ffffff,
+      #ffffff,
+      #00BFFF,
+      #1E90FF,
+      #40E0D0,
+      #ffffff,
+      #8A2BE2,
+      #7B68EE,
+      #9400D3,
+      #6A5ACD,
+      #ffffff,
+      #00FA9A,
+      #32CD32,
+      #FFD700,
+      #FF4500,
+      #FF1493,
+      #ffffff,
+      #F08080,
+      #FF6F61
+    );
+}
+
+.paletado{
+    background: linear-gradient(120deg,
+          #000000,
+          #b7094cff,
+          #a01a58ff,
+          #892b64ff,
+          #723c70ff,
+          #5c4d7dff,
+          #455e89ff,
+          #2e6f95ff,
+          #1780a1ff,
+          #0091adff,
+          #03045eff,
+          #023e8aff,
+          #0077b6ff,
+          #0096c7ff,
+          #00b4d8ff,
+          #48cae4ff,
+          #90e0efff,
+          #ade8f4ff,
+          #caf0f8ff,
+          #d8f3dcff,
+          #000000,
+          #b7e4c7ff,
+          #95d5b2ff,
+          #74c69dff,
+          #52b788ff,
+          #40916cff,
+          #2d6a4fff,
+          #1b4332ff,
+          #007f5fff,
+          #2b9348ff,
+          #55a630ff,
+          #80b918ff,
+          #000000,
+          #aacc00ff,
+          #bfd200ff,
+          #d4d700ff,
+          #dddf00ff,
+          #eeef20ff,
+          #ffff3fff,
+          #000000,
+          #ff0a54ff,
+          #ff477eff,
+          #ff5c8aff,
+          #ff7096ff,
+          #ff85a1ff,
+          #ff99acff,
+          #fbb1bdff,
+          #f9bec7ff,
+          #f7cad0ff,
+          #fae0e4ff);
+}
+
+.original{
+    background: linear-gradient(120deg, #e8c5ec, #50f0fb, #8486a8, #f97d54, #c514a2, #c67029, #39576e, #9db476, #9f2695, #2d3156, #c3efd2, #73b34c, #6b93a1, #f878ac, #8e5093, #b9bb7e, #6345ac, #c4e6bd, #1d8097, #e0ad7d, #2faeff, #4bdb3c, #cd0844, #20221d, #f5319d, #8030fe, #304dac, #d17559, #1fb733, #07ac9b, #84f90e, #b1b901, #fb9ebe, #f4d404, #1000d6, #c2c305, #4ec71c, #e71f63, #d0ab52, #9d3872, #515a79);
+}

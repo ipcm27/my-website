@@ -1,24 +1,16 @@
-section{
-  height:520px;
-}
-.btn-carrer{
-  width: 100%;
-  border-left: 2px solid gray;
-  border-radius: 0px !important;
+p{
+  font-size: 1rem;
 }
 
-.btn-carrer:hover{
-  color: red;
-  border-left: 2px solid red;
+
+li{
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-.selected{
-  color: red;
-  border-left: 2px solid red;
-  background-color: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
-
-}
-
-ul {
-  list-style-type: none;
+@media (max-width: 639px) {
+  li {
+    display: flex;
+    flex-direction: column;
+  }
 }

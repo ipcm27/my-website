@@ -1,29 +1,32 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CvService } from 'src/app/services/cv.service';
 import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
-  selector: 'app-hero',
-  templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css']
+    selector: 'app-hero',
+    templateUrl: './hero.component.html',
+    imports: [],
+    styleUrls: ['./hero.component.css']
 })
-export class HeroComponent implements OnInit{
-
-
-
-  constructor(private navigationService:NavigationService) {}
+export class HeroComponent implements OnInit {
+  constructor(
+    private navigationService: NavigationService,
+    private cvService: CvService
+  ) {}
 
   ngOnInit() {
-
     this.navigationService.scroll$.subscribe(() => {
-      this.navigateToSkills()
+      this.navigateToSkills();
     });
-
   }
 
   navigateToSkills() {
-    this.navigationService.scrollToSkills()
+    this.navigationService.scrollToSkills();
   }
 
+  downloadCV() {
+    this.cvService.downloadCV();
+  }
 }

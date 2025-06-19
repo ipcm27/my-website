@@ -9,88 +9,71 @@ import { Project } from "../interfaces/projects"
 export class ProjectService {
   private projects: Project[] = [
     {
-      title: 'Barbershop Management System',
+      title: 'Zilla Order - Microservices E-commerce',
+      img: '/assets/projects/zilla-order.png',
+
       backend: {
         description:
-          'Management of appointments, clients, services, and professionals.',
-        technologies: [
-          'Java',
-          'Spring Boot',
-          'JPA/Hibernate',
-          'PostgreSQL/MySQL',
-        ],
+          'Distributed microservices for order, product and inventory management. Each service has its own database, publishes domain events via Kafka and is hardened with Resilience4j for retries, circuit-breakers and rate-limiting. Observability via Logstash + Kibana and containerised deployment (Docker / Kubernetes).',
       },
+
       frontend: {
         description:
-          'Dashboard for clients and employees to view available times, schedule services, and check history.',
-        technologies: ['Angular', 'TypeScript', 'Angular Material'],
+          'Lightweight Angular dashboard for basic product and order flows; focus remains on robust back-end services.',
       },
+
       differentials: [
-        'JWT for authentication',
-        'Real-time notifications with WebSockets',
-        'Deployment with Docker and Kubernetes',
+        'Kafka event-driven communication',
+        'Resilience4j fault-tolerance (circuit-breaker, retries)',
+        'MongoDB (Product) + PostgreSQL (Order & Inventory)',
+        'Containerised with Docker; Helm-ready Kubernetes manifests',
+        'Centralised logging/metrics with Logstash + Kibana',
+        'Scalable REST APIs built with Spring Boot',
       ],
+
       technologies: [
         'Java',
         'Spring Boot',
-        'JPA/Hibernate',
+        'Kafka',
+        'Resilience4j',
         'PostgreSQL',
+        'MongoDB',
         'Docker',
         'Kubernetes',
+        'Logstash',
+        'Kibana',
         'Angular',
       ],
+
+      link: 'https://github.com/ipcm27/Zilla-Order',
     },
     {
-      title: 'Package Tracking System',
+      title: 'Fetch & Flex - AI Agent with RAG',
+      img: '/assets/projects/rag-model.webp',
       backend: {
-        description: 'Integration with logistics APIs for real-time tracking.',
-        technologies: ['Java', 'Spring Boot', 'Redis', 'Kafka'],
+        description:
+          'AI agent combining Retrieval-Augmented Generation (RAG) with a vector database for semantic search, using Langchain and OpenAI APIs to generate contextual answers from internal documents.',
       },
       frontend: {
         description:
-          'User-friendly interface for entering tracking codes and monitoring packages.',
-        technologies: ['Angular', 'RxJS', 'TypeScript', 'Google Maps API'],
+          'Clean and responsive chat interface to ask questions and receive AI-generated answers with source highlighting and tool-triggered actions.',
       },
       differentials: [
-        'Caching with Redis',
-        'Kafka for real-time event processing',
-        'Map location visualization',
+        'Langchain-based agent with custom tools and memory',
+        'Semantic search using vector DB (Chroma/FAISS)',
+        'Document ingestion pipeline with PDF/Markdown support',
+        'Minimal API usage: retrieval and generation are decoupled',
+        'Agent capable of summarizing, saving or exporting answers',
       ],
       technologies: [
-        'Java',
-        'Spring Boot',
-        'Redis',
-        'Kafka',
-        'Angular',
-        'RxJS',
-        'Google Maps API',
-      ],
-    },
-    {
-      title: 'Book Recommendation System Using AI',
-      backend: {
-        description:
-          'Integration with OpenAI for book recommendations and using MongoDB for user data storage.',
-        technologies: ['Java', 'Spring Boot', 'MongoDB', 'OpenAI API'],
-      },
-      frontend: {
-        description:
-          'Interface for users to input their favorite books and view recommendations.',
-        technologies: ['Angular', 'TypeScript', 'Angular Material'],
-      },
-      differentials: [
-        'Integration with OpenAI',
-        'Using MongoDB for flexibility',
-        'Scalable system for large data volumes',
-      ],
-      technologies: [
-        'Java',
-        'Spring Boot',
-        'MongoDB',
+        'Python',
+        'Flask',
+        'Langchain',
+        'Chroma / FAISS',
         'OpenAI API',
         'Angular',
-        'TypeScript',
       ],
+      link: 'https://github.com/ipcm27/fetch-flex-rag-ai-agent',
     },
   ];
 

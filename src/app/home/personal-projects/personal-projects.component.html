@@ -1,33 +1,75 @@
-<section id="personal-projects">
-  <div class="d-flex flex-row title-box">
-    <h2 id="section-1" class="text-start" data-aos="fade-up">
-      <span class="color">04. </span>Some personal projects
-    </h2>
-    <span id="line"></span>
+<section id="projects" class="card bg-base-200 ">
+  <!-- Título -->
+  <div class="mb-4 sm:mb-12">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <h2 class="text-3xl font-bold text-primary" >
+        Projects I enjoyed doing:
+      </h2>
+      <div class="hidden md:block flex-grow h-px bg-primary opacity-40 ml-4 mt-2"></div>
+    </div>
   </div>
-  <div class="container row">
-<div class="card">
-  <p-carousel [value]="Projects" [numVisible]="3" [numScroll]="3" [circular]="false"
-    [responsiveOptions]="responsiveOptions">
-    <ng-template let-product pTemplate="item">
-      <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
-        <div class="mb-3">
-          <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name"
-            class="w-6 shadow-2" />
-        </div>
-        <div>
-          <h4 class="mb-1">{{ product.name }}</h4>
-          <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
-          <div class="car-buttons mt-5">
-            <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
-            <p-button type="button" styleClass="p-button-success p-button-rounded mr-2"
-              icon="pi pi-star-fill"></p-button>
+
+  <!-- Grid de projetos -->
+  <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 justify-items-center">
+    @for (project of projects; track project) {
+      <div
+        class="card !m-0 !sm:m-10 bg-base-100 shadow-xl transition-transform hover:scale-[1.01] w-full max-w-100px]">
+        <!-- Imagem -->
+        <figure class="overflow-hidden aspect-video bg-white flex items-center justify-center rounded-t-xl">
+          <img [src]="project.img" alt="{{ project.title }}"
+            class="max-h-full max-w-full object-contain transition-transform duration-500 hover:scale-105" />
+        </figure>
+        <!-- Conteúdo do card -->
+        <div class="card-body px-4 py-4 sm:px-5 sm:py-6">
+          <h2 class="card-title text-lg sm:text-xl">{{ project.title }}</h2>
+          <!-- Backend -->
+          <div class="mt-2">
+            <h3 class="text-sm font-semibold">Backend:</h3>
+            <p class="text-sm text-gray-700">{{ project.backend.description }}</p>
+          </div>
+          <!-- Frontend -->
+          <div class="mt-2">
+            <h3 class="text-sm font-semibold">Frontend:</h3>
+            <p class="text-sm text-gray-700">{{ project.frontend.description }}</p>
+          </div>
+          <!-- Differentials -->
+          <div class="mt-3">
+            <h3 class="text-sm font-semibold mb-1">Differentials:</h3>
+            <div class="flex flex-wrap gap-2">
+              @for (diff of project.differentials; track diff) {
+                <div class="badge badge-outline text-xs h-auto p-1">
+                  {{ diff }}
+                </div>
+              }
+            </div>
+          </div>
+          <!-- Tech Stack -->
+          <div class="mt-3">
+            <h3 class="text-sm font-semibold mb-1">Tech Stack:</h3>
+            <div class="flex flex-wrap gap-2">
+              @for (tech of project.technologies; track tech) {
+                <div class="badge badge-secondary text-xs">
+                  {{ tech }}
+                </div>
+              }
+            </div>
+          </div>
+          <!-- GitHub -->
+          <div class="mt-4">
+            <p class="text-sm break-words">
+              <strong>GitHub:</strong>
+              <a [href]="project.link" target="_blank" class="text-primary underline break-all">
+                {{ project.link }}
+              </a>
+            </p>
           </div>
         </div>
       </div>
-    </ng-template>
-  </p-carousel>
-</div>
+    }
   </div>
+
+  <button class="btn btn-primary btn-lg md:btn-2xl mt-10 mx-auto ">
+    <label for="contact-modal" class="text-white nav-link">📅 Schedule an Interview</label>
+  </button>
 
 </section>

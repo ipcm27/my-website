@@ -1,42 +1,58 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, Input, OnInit } from '@angular/core';
 import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
-  selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css'],
+    selector: 'app-skills',
+    templateUrl: './skills.component.html',
+    imports: [],
+    styleUrls: ['./skills.component.css']
 })
-export class SkillsComponent implements OnInit{
-  Skills = ['Java 8', 'JavaScript','TypeScript', 'HTML', 'CSS', 'SQL'];
-  Frameworks = [
-    'Angular',
-    'Spring',
-    'Bootstrap',
-    'Material',
-    'Git and Gitflow',
-    'Scrum and Agile',
-    'RxJS',
-    'Azure cloud',
-    'Docker and Kubernetes',
-    'MySql, Oracle and Postgres',
-    'MongoDb',
-    'JUnit, Karma and Jasmine',
-    'REST & SOAP',
-    'Apache Tomcat and Glassfish',
-    'CI/CD',
-    'MIcroservices and SOA',
+export class SkillsComponent implements OnInit {
+  @Input() cardIndex!: number;
+
+  // ── Coding languages ──────────────────────────────────────────────
+  skills: string[] = [
+    'Java 8+',
+    'JavaScript',
+    'TypeScript',
+    'Python (basic)',
+    'SQL',
+    'HTML',
+    'CSS',
   ];
+
+  // ── Frameworks / Tools / Systems ──────────────────────────────────
+  frameworks: string[] = [
+    'Spring Boot',
+    'Angular 12+ / AngularJS',
+    'SQL & NoSQL Databases',
+    'Scrum & Agile',
+    'JUnit • Mockito • Karma • Jasmine',
+    'RAG / LLM integration',
+    'RxJS & NgRx',
+    'Bootstrap / Material UI',
+    'Docker & Kubernetes',
+    'Git & GitFlow',
+    'CI/CD pipelines',
+    'Microservices',
+  ];
+
+  // ── Languages (spoken) ────────────────────────────────────────────
+  spoken: string[] = [
+    'Portuguese – Native',
+    'English – Fluent',
+    'Spanish – B2',
+    'French – Beginner',
+  ];
+
   constructor(private navigationService: NavigationService) {}
 
   ngOnInit(): void {
-    this.navigationService.scroll$.subscribe(() => {
-      this.scrollToSection();
-    });
+    this.navigationService.scroll$.subscribe(() => this.scrollToSection());
   }
 
-  scrollToSection(): void {
-    const skillsElement = document.getElementById('skills');
-    skillsElement?.scrollIntoView({ behavior: 'smooth' });
+  private scrollToSection(): void {
+    document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
   }
-
 }

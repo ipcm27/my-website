@@ -1,22 +1,62 @@
-<section id="home" class="main d-flex justify-content-center flex-column">
-  <div>
-    <div class="container mx-auto d-flex flex-row">
-      <div class="col-12 col-md-8 d-flex flex-column justify-content-center">
-        <h6 class="color">Hi, My name is</h6>
-        <h1 class="title">Igor (icode) Pierre</h1>
-        <h2 class="sub-title">The Best Fullstack developer for Your Needs</h2>
-        <p>I’m a software engineer specializing in building exceptional digital experiences. <br>
-          I make ideas become powerful digital solutions.</p>
-        <button class="btn btn-main" (click)="navigateToSkills()">Check out my skills</button>
+<section id="home" class="hero px-4 py-16">
+  <div class="text-center md:text-left">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-8 max-w-6xl mx-auto">
+
+      <!-- Texto -->
+      <div class="w-full md:w-1/2">
+        <!-- Top tagline -->
+        <p class="uppercase text-sm text-primary font-semibold tracking-widest mb-2">
+          Fullstack Dev — Backend-first
+        </p>
+
+        <!-- Nome e título -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-2">
+          Hi, my name is <span class="text-primary">Igor Pierre Miranda</span>
+        </h1>
+
+        <!-- Frase de impacto -->
+        <p class="text-md italic text-gray-500 mb-6">
+          "I build scalable systems that leave the backlog and reach production."
+        </p>
+
+        <!-- Subtítulo -->
+        <!-- <h4 class="text-xl mb-6">Java / Angular Fullstack Developer</h4> -->
+
+        <!-- Descrição -->
+        <!-- <p class="mt-2 text-gray-700">
+          I design robust backends, clean UIs, and intelligent systems — combining engineering discipline with product
+          sense.
+        </p> -->
+
+        <div class="flex justify-center sm:justify-start">
+        <!-- Botão CTA -->
+        <button class="btn btn-primary mx-4 sm:mr-4">
+          <a href="/#projects">See what I can build</a>
+        </button>
+
+        <button class="btn btn-success sm:mr-4" (click)="downloadCV()">Download my cv</button>
       </div>
-      <div class="img-box col-12 col-md-4 d-flex justify-content-center">
-        <div class="img-wrapper mx-auto">
-          <div class="profile-picture-wrapper">
-            <img src="assets/IMG_3443.jpeg" class="profile-picture d-block mx-auto" alt="">
+      </div>
+
+      <!-- Stack cards -->
+      <div class="w-full md:w-1/2 flex flex-col items-center md:items-start gap-4" >
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+          <div class="p-4 bg-base-200 rounded-xl shadow-md hover:scale-105 transition">
+            <p class="text-sm text-gray-600">Java & Spring Boot</p>
           </div>
-          <div class="rectangle"></div>
+          <div class="p-4 bg-base-200 rounded-xl shadow-md hover:scale-105 transition">
+            <p class="text-sm text-gray-600">Angular & RxJS</p>
+          </div>
+          <div class="p-4 bg-base-200 rounded-xl shadow-md hover:scale-105 transition">
+            <p class="text-sm text-gray-600">SQL & NoSQL Databases</p>
+          </div>
+        </div>
+
+        <div class="mt-4 text-sm text-gray-500 text-center md:text-left max-w-lg">
+           Focused on performance, clean architecture, and delivering systems that scale.
         </div>
       </div>
+
     </div>
   </div>
 </section>
