@@ -1,13 +1,11 @@
 
 import { Component, CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
-import { CarouselModule } from 'primeng/carousel';
 import { Project } from 'src/app/interfaces/projects';
 import {ProjectService} from "src/app/services/project.service"
 
 @Component({
     selector: 'app-personal-projects',
-    imports: [CarouselModule, ButtonModule],
+    imports: [],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     templateUrl: './personal-projects.component.html',
     styleUrls: ['./personal-projects.component.scss']

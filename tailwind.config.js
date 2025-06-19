@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{html,ts}", // ou ajuste conforme sua estrutura
-  ],
+  content: ["./src/**/*.{html,ts}"],
   theme: {
     extend: {},
   },
@@ -24,6 +22,6 @@ module.exports = {
       },
       "light", // fallback
     ],
-    darkTheme: "devigor", // força o modo escuro ser o devigor, se quiser
+    darkTheme: "devigor",
   },
 };

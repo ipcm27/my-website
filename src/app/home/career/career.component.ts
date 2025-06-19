@@ -1,6 +1,6 @@
 
 import { Component, Input, OnInit } from '@angular/core';
-import * as moment from 'moment';
+import moment from 'moment';
 import { Role } from 'src/app/interfaces/roles';
 import { CareerService } from 'src/app/services/career.service';
 
