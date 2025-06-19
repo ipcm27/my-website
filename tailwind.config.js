@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{html,ts}", // ou ajusta conforme seu projeto
+    "./src/**/*.{html,ts}", // ou ajuste conforme sua estrutura
   ],
   theme: {
     extend: {},
@@ -11,11 +11,11 @@ module.exports = {
     themes: [
       {
         devigor: {
-          primary: "#0F172A", // Navy blue base
-          secondary: "#6366F1", // Indigo accent
-          accent: "#7C3AED", // Optional violet variation
-          neutral: "#1E293B", // Slate/neutral
-          "base-100": "#F9FAFB", // Background
+          primary: "#0F172A", // Azul escuro
+          secondary: "#6366F1", // Indigo
+          accent: "#7C3AED", // Roxo
+          neutral: "#1E293B",
+          "base-100": "#F9FAFB",
           info: "#0EA5E9",
           success: "#22C55E",
           warning: "#FBBF24",
@@ -24,5 +24,6 @@ module.exports = {
       },
       "light", // fallback
     ],
+    darkTheme: "devigor", // força o modo escuro ser o devigor, se quiser
   },
 };
